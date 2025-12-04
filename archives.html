@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XIAOXUE // PRTS TERMINAL</title>
+    <title>XIAOXUE // ARCHIVES</title>
     <style>
         /* --- 核心变量与重置 --- */
         :root {
@@ -93,31 +93,6 @@
         .ak-status span { color: var(--ak-cyan); }
 
         /* --- 英雄区域 (个人信息) --- */
-        .hero-section {
-            padding: 60px 40px;
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            position: relative;
-        }
-
-        /* 头像容器样式，使用了切角 */
-        .avatar-container {
-            width: 120px; 
-            height: 120px; 
-            border: 2px solid var(--ak-yellow); 
-            padding: 5px;
-            clip-path: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%);
-        }
-
-        .avatar-container img {
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover;
-            clip-path: polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%);
-        }
-
-
         .hero-title {
             font-size: 64px;
             line-height: 1;
@@ -157,79 +132,11 @@
             transform: skewX(-45deg);
         }
 
-        /* --- 文章列表卡片 (Tech-Card) --- */
+        /* --- 内容区域布局 --- */
         .content-area {
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .ak-card {
-            background: var(--ak-dark-grey);
-            padding: 30px;
-            position: relative;
-            transition: all 0.3s ease;
-            /* 核心：切角效果 */
-            clip-path: polygon(
-                0 0, 
-                100% 0, 
-                100% calc(100% - 20px), 
-                calc(100% - 20px) 100%, 
-                0 100%
-            );
-            border-left: 4px solid transparent;
-        }
-
-        .ak-card:hover {
-            transform: translateY(-5px);
-            background: #333;
-            border-left: 4px solid var(--ak-yellow);
-        }
-
-        .card-meta {
-            font-family: var(--font-mono);
-            font-size: 12px;
-            color: var(--ak-light-grey);
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .card-title {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--ak-white);
-        }
-
-        .card-excerpt {
-            font-size: 14px;
-            color: var(--ak-light-grey);
-            line-height: 1.6;
-        }
-
-        /* 按钮风格 */
-        .ak-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 8px 20px;
-            background: transparent;
-            border: 1px solid var(--ak-light-grey);
-            color: var(--ak-white);
-            text-decoration: none;
-            font-size: 12px;
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: 0.2s;
-        }
-
-        .ak-btn:hover {
-            background: var(--ak-yellow);
-            color: var(--ak-black);
-            border-color: var(--ak-yellow);
         }
 
         /* --- 底部 --- */
@@ -268,7 +175,6 @@
             top: -2px;
             left: -2px;
         }
-
     </style>
 </head>
 <body>
@@ -288,62 +194,37 @@
         </div>
     </header>
 
-    <section class="hero-section">
-        <div class="avatar-container">
-            <img src="https://avatars.githubusercontent.com/u/000000?v=4" alt="Doctor Avatar">
-        </div>
-
-        <div>
-            <div class="hero-subtitle">/// PERSONAL ARCHIVES ///</div>
-            <h1 class="hero-title">WELCOME BACK,<br>DOCTOR XIAOXUE.</h1>
-            <div class="deco-line"></div>
-            <p style="color: var(--ak-light-grey); max-width: 500px;">
-                正在访问神经网络连接... 数据同步完成。<br>
-                当前位置：日本区域网络节点。<br>
-                日期：2025-12-04
-            </p>
-        </div>
-    </section>
-
-    <main class="content-area">
+    <main class="content-area" style="display: block; max-width: 800px;">
+        <h1 class="hero-title" style="font-size: 48px; margin-bottom: 5px;">ARCHIVES DATA LOG</h1>
+        <div class="hero-subtitle">/// ALL OPERATIONAL RECORDS ///</div>
         
-        <article class="ak-card">
-            <div class="card-meta">
-                <span>LOG_001</span>
-                <span>2025.12.04</span>
-            </div>
-            <h2 class="card-title">冬日生存指南与热饮配方</h2>
-            <p class="card-excerpt">
-                即使是理智归零的时刻，也需要一杯热咖啡来维持体温。记录一下最近在东京发现的不错的小店...
-            </p>
-            <a href="log_001.html" class="ak-btn">READ DATA >></a>
-        </article>
+        <div class="deco-line" style="margin-left: 0;"></div>
 
-        <article class="ak-card">
-            <div class="card-meta">
-                <span>LOG_002</span>
-                <span>2025.11.20</span>
-            </div>
-            <h2 class="card-title">作战记录：近期代码重构</h2>
-            <p class="card-excerpt">
-                就像源石病一样，技术债务如果不及时处理，会逐渐扩散到整个系统。关于最近项目重构的一些思考。
-            </p>
-            <a href="log_002.html" class="ak-btn">READ DATA >></a>
-        </article>
-
-        <article class="ak-card">
-            <div class="card-meta">
-                <span>LOG_003</span>
-                <span>2025.10.27</span>
-            </div>
-            <h2 class="card-title">摄影集：切尔诺伯格的阴影</h2>
-            <p class="card-excerpt">
-                虽然不是真的切城，但这座城市的工业废墟总能让人想起那个开始的地方。黑白胶片随拍。
-            </p>
-            <a href="log_003.html" class="ak-btn">READ DATA >></a>
-        </article>
-
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 15px; border-left: 3px solid var(--ak-dark-grey); padding-left: 15px; transition: border-left 0.2s;">
+                <a href="log_001.html" style="color: var(--ak-white); text-decoration: none; font-family: var(--font-main); font-size: 18px;">
+                    [LOG_001] 冬日生存指南与热饮配方 
+                </a>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--ak-light-grey);"> - 2025.12.04</span>
+            </li>
+            
+            <li style="margin-bottom: 15px; border-left: 3px solid var(--ak-dark-grey); padding-left: 15px; transition: border-left 0.2s;">
+                <a href="log_002.html" style="color: var(--ak-white); text-decoration: none; font-family: var(--font-main); font-size: 18px;">
+                    [LOG_002] 作战记录：近期代码重构 
+                </a>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: var(--ak-light-grey);"> - 2025.11.20</span>
+            </li>
+        </ul>
+        
     </main>
 
     <div class="hud-element">
-        <div c
+        <div class="hud-corner"></div>
+        PRTS CONNECTED<br>SYNC RATE: 100%
+    </div>
+
+    <footer class="ak-footer">
+        &copy; 2025 XIAOXUE. RHODES ISLAND TERMINAL UI. 
+    </footer>
+</body>
+</html>
