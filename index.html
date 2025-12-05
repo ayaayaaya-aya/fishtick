@@ -259,7 +259,7 @@
             color: var(--ak-yellow);
             z-index: 100;
         }
-        
+      
         .hud-corner {
             position: absolute;
             width: 5px;
@@ -269,6 +269,46 @@
             left: -2px;
         }
 
+                .status-banner {
+    background-color: var(--ak-dark-grey);
+    padding: 30px 40px;
+    margin-top: 40px;
+    border-top: 2px solid var(--ak-yellow);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+}
+
+.banner-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.banner-subtitle {
+    font-size: 14px;
+    color: var(--ak-light-grey);
+    padding-left: 20px;
+}
+
+/* --- 新增：二级内容区域标题样式 --- */
+.secondary-area {
+    /* 覆盖 Grid 布局，并增加上边距 */
+    padding-top: 60px;
+}
+
+.secondary-area .section-title {
+    grid-column: 1 / -1; /* 让标题跨越所有列 */
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--ak-cyan);
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--ak-dark-grey);
+    padding-bottom: 10px;
+}
+      
+
+        
     </style>
 </head>
 <body>
@@ -345,5 +385,65 @@
 
     </main>
 
+    <section class="status-banner">
+        <div class="banner-title">
+            <span style="color: var(--ak-yellow);">>> LOGISTICS UPDATE:</span> NEW OPERATIVES IDENTIFIED.
+        </div>
+        <p class="banner-subtitle">
+            "We who have chosen the way of Rhodes Island are not bound by fear or prejudice. We are bound by a common goal."
+        </p>
+    </section>
+
+    <section class="content-area secondary-area">
+        <h2 class="section-title">RECENT TACTICAL ANALYSIS [LOGS]</h2>
+        
+        <article class="ak-card">
+            <div class="card-meta">
+                <span>LOG_004</span>
+                <span>2025.10.15</span>
+            </div>
+            <h2 class="card-title">潜能提升：CSS 动画与性能</h2>
+            <p class="card-excerpt">
+                对于前线干员来说，快速反应至关重要。本文分析了高效率 CSS 动画的几种最佳实践。
+            </p>
+            <a href="log_004.html" class="ak-btn">READ DATA >></a>
+        </article>
+        
+        <article class="ak-card">
+            <div class="card-meta">
+                <span>LOG_005</span>
+                <span>2025.09.01</span>
+            </div>
+            <h2 class="card-title">泰拉气候异常：数据模型探讨</h2>
+            <p class="card-excerpt">
+                源石技艺的影响日益复杂，我们对气候模型的预测能力仍需提升。这是本季度的报告总结。
+            </p>
+            <a href="log_005.html" class="ak-btn">READ DATA >></a>
+        </article>
+
+        <article class="ak-card">
+            <div class="card-meta">
+                <span>LOG_006</span>
+                <span>2025.08.10</span>
+            </div>
+            <h2 class="card-title">基础设施建设：高效部署流程</h2>
+            <p class="card-excerpt">
+                在快速移动中建立新的前线基地，需要一套标准化的部署流程。关于自动化部署的记录。
+            </p>
+            <a href="log_006.html" class="ak-btn">READ DATA >></a>
+        </article>
+        
+    </section>
+
     <div class="hud-element">
-        <div c
+        <div class="hud-corner"></div>
+        PRTS CONNECTED<br>SYNC RATE: 100%
+    </div>
+
+    <footer class="ak-footer">
+        &copy; 2025 XIAOXUE. RHODES ISLAND TERMINAL UI. <br>
+        DESIGNED FOR TACTICAL ANALYSIS.
+    </footer>
+</body>
+</html>
+    
